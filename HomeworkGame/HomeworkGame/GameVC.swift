@@ -9,17 +9,14 @@ import GameplayKit
 import SpriteKit
 
 class GameVC: UIViewController {
+    
     override func viewDidLoad() {
         self.view.backgroundColor = UIColor.systemBlue
         super.viewDidLoad()
-        let scene = GameScene(size: .zero)
+        let scene = GameScene(size: view.bounds.size)
         let skView = SKView()
         view = skView
-        scene.scaleMode = .resizeFill
         skView.presentScene(scene)
     }
-    
-    
-
 }
 
